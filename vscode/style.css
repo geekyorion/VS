@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 10px;
+}
+
+.input-area {
+    padding: 10px;
+    min-height: calc(100vh - 95px);
+    background: #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.input-box {
+    width: 100%;
+    max-width: 100%;
+    min-height: calc((100vh - 125px) / 2);
+    padding: 10px;
+    resize: none;
+}
+
+.input-box::placeholder {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.input-box:focus {
+    outline: 3px solid black;
+}
+
+.controls {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+
+.controls button {
+    padding: 5px 10px;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    background: black;
+}
+
+.btn-clear {
+    margin-right: -3px;
+}
