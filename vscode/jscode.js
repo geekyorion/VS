@@ -4,7 +4,13 @@ const decodeThis = e => {
     let value = e.target.value.toLowerCase();
     let result = "";
     for (let i = 0; i < value.length; i++) {
-        result += Object.keys(codes).find(key => codes[key] === value[i]) || value[i];
+        let char = value[i];
+        if (char === "/") {
+            i++;
+            result += value[i];
+            continue;
+        }
+        result += Object.keys(codes).find(key => codes[key] === char) || char;
     }
     decodedEl.value = result;
 }
@@ -13,7 +19,11 @@ const encodeThis = e => {
     let value = e.target.value.toLowerCase();
     let result = "";
     for (let i = 0; i < value.length; i++) {
-        result += codes[value[i]] || value[i];
+        let char = value[i];
+        if (Object.values(codes).indexOf(char) !== -1) {
+            result += "/";
+        }
+        result += codes[char] || char;
     }
     encodedEl.value = result;
 }
@@ -48,7 +58,7 @@ window.onload = () => {
         "w": "\\",
         "x": '"',
         "y": "]",
-        "z": "*"
+        "z": "*",
     };
 
     encodedEl.addEventListener("input", decodeThis);
