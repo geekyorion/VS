@@ -59,6 +59,7 @@ window.onload = () => {
         "x": '"',
         "y": "]",
         "z": "*",
+        "/": "/",
     };
 
     encodedEl.addEventListener("input", decodeThis);
