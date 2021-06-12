@@ -1,0 +1,118 @@
+.links {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    text-align: right;
+}
+
+.link {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition-duration: 0.25s;
+    color: #ddd;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #111;
+    border-bottom: 1px solid #fff;
+}
+
+.link::before {
+    content: '';
+    height: 0;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: transparent;
+}
+
+.link:hover::before {
+    background-color: #fff;
+    transition-duration: 0.25s;
+    height: 100%;
+}
+
+/* .link:hover::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, transparent 70%, #fff);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 5px;
+} */
+
+.fullscreen {
+    position: fixed;
+    bottom: 12.5px;
+    right: 15px;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 4px;
+    opacity: 0.7;
+}
+
+.fullscreen:hover {
+    transform: scale(1.1);
+}
+
+.boxes {
+    width: 4px;
+    height: 4px;
+}
+
+.box1 {
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+.box2 {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.box3 {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+.box4 {
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+body.fullscreen-active .boxes {
+    border: none;
+}
+
+body.fullscreen-active .box1 {
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+body.fullscreen-active .box2 {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+body.fullscreen-active .box3 {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+body.fullscreen-active .box4 {
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+}

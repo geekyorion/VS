@@ -1,0 +1,36 @@
+.page-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 50;
+    text-align: center;
+    color: white;
+}
+
+.name-text {
+    display: block;
+    /* -webkit-text-stroke: 1px white; */
+    font-size: 50px;
+    text-shadow: 0 0 10px white;
+    z-index: 10;
+}
+
+.background-image {
+    background-image: url('modern_professional.svg');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+    z-index: 5;
+}
+
+.main-content .typing-text {
+    font-size: 40px;
+}

@@ -1,0 +1,22 @@
+.wrapper,
+.wrapper > div {
+    min-height: 100vh;
+    position: relative;
+}
+
+.page-content {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* .home-page {
+    background: #e77f6788;
+}
+
+.about-page {
+    background: #e15f4188;
+}
+
+.skills-page {
+    background: #f1906688;
+} */

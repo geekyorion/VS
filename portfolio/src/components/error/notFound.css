@@ -1,0 +1,81 @@
+.error-page {
+    color: #000;
+    background: linear-gradient(135deg, #ddd, #fff);
+}
+
+.nav-flash {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #111a;
+    animation: nav-flash ease 2s infinite;
+    width: 230px;
+    height: 46px;
+    border-bottom-left-radius: 5px;
+}
+
+.nav-flash::after {
+    content: 'Por favor, deja a mis pájaros en paz';
+    width: 210px;
+    padding: 10px;
+    color: #222;
+    position: absolute;
+    top: 46px;
+    right: 0;
+    font-size: 12px;
+    animation: text-flash ease 1s infinite;
+    text-align: center;
+}
+
+.nav-flash:hover::after {
+    content: 'Please, leave my birds alone';
+}
+
+@keyframes nav-flash {
+    0% {
+        background: #fff8;
+    }
+    50% {
+        background: #111a;
+    }
+    100% {
+        background: #fff8;
+    }
+}
+
+@keyframes text-flash {
+    0% {
+        color: #222;
+    }
+    50% {
+        color: #888;
+    }
+    100% {
+        color: #222;
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-image-404 {
+    background-image: url('page_not_found.svg');
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+    z-index: 5;
+}
+
+.main-text {
+    z-index: 10;
+    font-size: 30px;
+    text-align: center;
+}
