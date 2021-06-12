@@ -16,7 +16,7 @@
     "react-scripts": "4.0.1",
     "react-transition-group": "^4.4.1",
     "styled-components": "^5.2.1",
-    "three": "^0.124.0",
+    "three": "^0.125.0",
     "typed.js": "^2.0.11",
     "vanta": "^0.5.21",
     "web-vitals": "^0.2.4"
